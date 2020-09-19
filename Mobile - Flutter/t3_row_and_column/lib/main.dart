@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_documentations/layout.dart';
 
 void main() {
   runApp(new MaterialApp(
@@ -56,6 +57,18 @@ class Tugas2 extends StatelessWidget {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Tugas'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.arrow_right,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new Layout()));
+            },
+          )
+        ],
       ),
       body: Container(
         color: Colors.grey,
