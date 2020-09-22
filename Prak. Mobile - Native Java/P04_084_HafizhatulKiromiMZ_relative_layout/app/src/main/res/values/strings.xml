@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">P04_084_HafizhatulKiromiMZ_relative_layout</string>
+    <string-array name="daftar_makanan">
+        <item>Bakso</item>
+        <item>Ayam Goreng</item>
+        <item>Mie Rebus</item>
+        <item>Nasi Padang</item>
+        <item>Ikan Bakar</item>
+        <item>Seblak</item>
+        <item>Gorengan</item>
+        <item>Mie Ayam</item>
+    </string-array>
+    <string-array name="kategori">
+        <item>Makanan</item>
+        <item>Minuman</item>
+    </string-array>
+</resources>

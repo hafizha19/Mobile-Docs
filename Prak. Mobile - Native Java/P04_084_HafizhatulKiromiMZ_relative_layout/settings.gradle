@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "P04_084_HafizhatulKiromiMZ_relative_layout"
