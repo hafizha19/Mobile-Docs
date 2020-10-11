@@ -4,7 +4,11 @@ void main() {
   // runApp(MyApp());
   runApp(MaterialApp(
     title: 'Navigation Basics',
-    home: FirstRoute(),
+    initialRoute: '/',
+    routes: {
+      '/': (context) => FirstRoute(),
+      '/second': (context) => SecondRoute(),
+    },
   ));
 }
 
@@ -134,9 +138,9 @@ class FirstRoute extends StatelessWidget {
       ),
       body: Center(
         child: RaisedButton(
-          child: Text('Open Route'),
+          child: Text('Open Route Named'),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => SecondRoute()));
+            Navigator.pushNamed(context, '/second');
           },
         ),
       ),
