@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp2());
+  // runApp(MyApp());
+  runApp(MaterialApp(
+    title: 'Navigation Basics',
+    home: FirstRoute(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -68,7 +72,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyApp2 extends StatelessWidget {
+class MenuDrawer extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -115,6 +119,44 @@ class MyApp2 extends StatelessWidget {
               )
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class FirstRoute extends StatelessWidget {
+  @override 
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('First Route')
+      ),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Open Route'),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => SecondRoute()));
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Second Route')
+      ),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Go Back'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
     );
